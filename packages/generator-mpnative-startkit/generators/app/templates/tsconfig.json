@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "strictNullChecks": true,
+
+    // "隐式any类型报错": false,
+    "noImplicitAny": false,
+
+    "module": "commonjs",
+    "target": "es5",
+    "allowJs": false,
+    "experimentalDecorators": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "alwaysStrict": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "noFallthroughCasesInSwitch": true,
+
+    // "未使用的局部变量则抛错": true,
+    "noUnusedLocals": true,
+    // "未使用的参数则抛错": true,
+    "noUnusedParameters": true,
+
+    "strict": true,
+    "removeComments": true,
+    "pretty": true,
+    "strictPropertyInitialization": true,
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "typeRoots": ["./typings", "./node_modules/miniprogram-api-typings"],
+    "lib": ["es5", "es2015", "scripthost"]
+  },
+  "include": ["./typings/*.d.ts", "./src/**/*.ts"],
+  "exclude": ["node_modules", "**/node_modules"]
+}

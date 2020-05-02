@@ -1,0 +1,14 @@
+{
+  "devkit": {
+    "commands": {
+      "dev": {
+        "builder": "feflow-devkit-mpnative-startkit:dev",
+        "options": {}
+      },
+      "build": {
+        "builder": "feflow-devkit-mpnative-startkit:build",
+        "options": {}
+      }
+    }
+  }
+}
