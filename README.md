@@ -6,5 +6,5 @@
 
 ## 相关库
 
-* [generator-mpnative-startkit]()
-* [feflow-devkit-mpnative-startkit]()
+* [generator-mpnative-startkit](https://www.npmjs.com/package/generator-mpnative-startkit)
+* [feflow-devkit-mpnative-startkit](https://www.npmjs.com/package/feflow-devkit-mpnative-startkit)
