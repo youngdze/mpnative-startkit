@@ -12,14 +12,11 @@ describe('generator-mpnative-startkit:app', () => {
 
   it('creates files', () => {
     assert.file([
-      '.babelrc',
       '.commitlintrc.js',
       '.editorconfig',
       '.gitignore',
-      '.npmrc',
       '.prettierignore',
       '.prettierrc',
-      '.yarnrc',
       '.feflowrc.json',
       'readme.md',
       'tsconfig.json',

@@ -1,6 +1,6 @@
 {
   "name": "generator-mpnative-startkit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "原生小程序初始框架，对接 omix，支持 ts 和 less",
   "repository": "https://github.com/youngdze/mpnative-startkit/tree/master/packages/generator-mpnative-startkit",
   "author": {
