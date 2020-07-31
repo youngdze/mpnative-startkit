@@ -41,6 +41,7 @@ const globs = {
   image: `${srcPath}/**/*.{png,jpg,jpeg,gif,svg}`,
 };
 globs.copy = [
+  'package.json',
   `${srcPath}/**`,
   `!${globs.ts}`,
   `!${globs.js}`,
