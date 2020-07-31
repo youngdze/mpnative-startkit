@@ -1,6 +1,6 @@
 {
   "name": "feflow-devkit-mpnative-startkit",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "mpnative feflow 开发套件",
   "repository": "https://github.com/youngdze/mpnative-startkit/tree/master/packages/feflow-devkit-mpnative-startkit",
   "author": "youngdze",

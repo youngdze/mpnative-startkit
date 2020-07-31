@@ -41,7 +41,6 @@ const globs = {
   image: `${srcPath}/**/*.{png,jpg,jpeg,gif,svg}`,
 };
 globs.copy = [
-  'package.json',
   `${srcPath}/**`,
   `!${globs.ts}`,
   `!${globs.js}`,
@@ -92,8 +91,18 @@ function imageCompile() {
 }
 
 function copy() {
-  return src(globs.copy, { ...getSrcOpt(), since: lastRun(copy) })
-    .pipe(dest(resolvePath(distPath)));
+  return src(globs.copy, { ...getSrcOpt(), since: lastRun(copy) }).pipe(
+    dest(resolvePath(distPath)),
+  );
+}
+
+// 针对 package.json
+function copyNpm() {
+  return src('package.json', {
+    basePath: resolvePath(basePath),
+    allowEmpty: true,
+    since: lastRun(copy),
+  }).pipe(dest(resolvePath(distPath)));
 }
 
 function watchFile() {
@@ -106,15 +115,16 @@ function watchFile() {
   watch(globs.js, watchOpts, series(jsCompile));
   watch(globs.image, watchOpts, series(imageCompile));
   watch(globs.copy, watchOpts, series(copy));
+  watch('package.json', watchOpts, series(copyNpm));
 }
 
 exports.clean = parallel(clear, clearCache);
 exports.default = exports.build = series(
   exports.clean,
-  parallel(copy, lessCompile, tsCompile, jsCompile, imageCompile),
+  parallel(copy, copyNpm, lessCompile, tsCompile, jsCompile, imageCompile),
 );
 exports.watch = series(watchFile);
 exports.dev = series(
-  parallel(copy, lessCompile, tsCompile, jsCompile, imageCompile),
+  parallel(copy, copyNpm, lessCompile, tsCompile, jsCompile, imageCompile),
   watchFile,
 );
