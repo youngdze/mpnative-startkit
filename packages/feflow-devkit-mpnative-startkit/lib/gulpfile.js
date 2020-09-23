@@ -13,7 +13,9 @@ const cache = require('gulp-cache');
 const del = require('del');
 
 const babelConfig = {
+  presets: ['@babel/preset-env'],
   plugins: [
+    '@babel/plugin-proposal-object-rest-spread',
     [
       'module-resolver',
       {

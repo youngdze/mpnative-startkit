@@ -1,12 +1,14 @@
 {
   "name": "feflow-devkit-mpnative-startkit",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "mpnative feflow 开发套件",
   "repository": "https://github.com/youngdze/mpnative-startkit/tree/master/packages/feflow-devkit-mpnative-startkit",
   "author": "youngdze",
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/preset-env": "^7.11.5",
     "autoprefixer": "^9.7.6",
     "babel-plugin-module-resolver": "^4.0.0",
     "del": "^5.1.0",
